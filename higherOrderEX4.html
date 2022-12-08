@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher order function</title>
+</head>
+<body>
+    <script>
+        function first(){
+          return second  //return 2nd function inside first function
+        }
+       
+        // function first(){
+        //     return function(){console.log("This is anonymous function")}
+        // }
+
+        // function first(){
+        //     return ()=>{console.log("This is Arrow function")}
+        // }
+
+       
+        function second(){      //this is named function
+            console.log('helo world this is second function ')
+        }
+
+          
+        //   let x = first()  //value is came but that vlaue assign to a variable then only we can use
+        //   x()              //use the value of first()fucton using var.var is called as a another function
+      
+        //   let x = first(second())
+
+        let x = first()()
+
+    </script>
+</body>
+</html>

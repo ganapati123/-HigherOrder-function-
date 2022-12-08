@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normal functions</title>
+</head>
+<body>
+    <script>
+        var arr = [10,20,30,40]
+
+        function square(arr){
+            squares = []    // squares is a empty array variable. let/var mentioned is your choice
+            for(ele of arr){
+             let res = ele*ele;
+              squares.push(res)
+            }
+            return squares
+        }
+        function cube(arr){
+          let  cubes=[]     // cubes is a empty array. let/var mentioned is your choice
+            for(ele of arr){
+                let res = ele*ele*ele
+                cubes.push(res)
+            }
+            return cubes
+        }
+        let y=cube(arr)  
+        console.log(y)
+
+       let x = square(arr)
+       console.log(x)
+    </script>
+</body>
+</html>

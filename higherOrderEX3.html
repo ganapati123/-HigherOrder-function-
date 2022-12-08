@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order functions</title>
+</head>
+<body>
+    <script>
+        var arr = [10,20,30,40]
+ 
+        function square(num){
+            return num*num
+        }
+        function cube(num){
+            return num*num*num
+        }
+        function increment(num){
+            return num+1
+        }
+
+    //A higher order function is a function,which takes a function as an argument or returns a new function   
+       
+    
+        //  function anyoperation(arr,operation){  //arr,operation are variables but we are calling parameters in functions
+        //     let result = []    //empty array i have taken 
+           
+        //     for(ele of arr){     //iterate all elements inside arr and arr to ele(alias name) 
+        //       result.push(operation(ele)) //we have to pass each element to opearation function like increment/square/cube
+        //     }
+        //     return result
+        // }
+
+        function anyoperation(arr,operation){  //arr,operation are variables but we are calling parameters in functions
+            let result = []    //empty array i have taken 
+           
+            for(ele of arr){     //iterate all elements inside arr and arr to ele(alias name) 
+            let temp = operation(ele) //we have to pass each element to opearation function like increment/square/cube
+            result.push(temp)   //In this code I'm trying to iterate through an an array of objects and assigning each object to the property of a temporary template object that I then push to the results array
+        }
+            return result
+        }
+        let x = anyoperation(arr,square)  //anyopearation(arr,operation name),these are we are calling arguments,here function names calling as argumnets
+        console.log(x)
+
+        let y = anyoperation(arr,cube)
+        console.log(y)
+
+        let inc = anyoperation(arr,increment)
+        console.log(inc)
+    </script>
+</body>
+</html>
